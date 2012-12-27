@@ -1,0 +1,44 @@
+Hello Drew -
+
+This is my first attempt at a Git repository project.
+
+Hopefully this will successfully save to GitHub.
+
+
+Here are some notes on my hadoop installation:
+
+Running Hadoop
+
+To get yourself off the ground, go ahead and run the following commands:
+
+Format the Hadoop Namenode using:
+hadoop namenode -format
+
+
+Start Hadoop by running the script:
+/usr/local/Cellar/hadoop/1.1.1/libexec/bin/start-all.sh
+
+
+Run some quick tests
+hadoop dfs -ls /
+
+cd /usr/local/Cellar/hadoop/1.1.1/libexec
+hadoop jar hadoop-examples-1.1.1.jar pi 10 100
+
+
+Don’t forget you can access the Map Reduce Admin and HDFS Admin through the web browser
+
+http://localhost:50030 – Map Reduce Administrator
+http://localhost:50070 – HDFS Administrator
+ 
+
+To Stop Hadoop
+/usr/local/Cellar/hadoop/1.1.1/libexec/bin/stop-all.sh
+
+Streaming Hadoop
+
+/usr/local/Cellar/hadoop/1.1.1/libexec/contrib/streaming/hadoop-streaming-1.1.1.jar
+
+Look at files (output for example)
+
+hadoop dfs -cat /user/hduser/gutenberg-output/part-00000
